@@ -45,11 +45,6 @@ export function generateMetadata() {
 
 const structure = [
   {
-    title: about.intro.title,
-    display: about.intro.display,
-    items: [],
-  },
-  {
     title: about.work.title,
     display: about.work.display,
     items: about.work.experiences.map((experience) => experience.company),
@@ -91,6 +86,7 @@ export default function About() {
           }),
         }}
       />
+
       {about.tableOfContent.display && (
         <Flex
           style={{ left: "0", top: "50%", transform: "translateY(-50%)" }}
@@ -104,32 +100,6 @@ export default function About() {
         </Flex>
       )}
       <Flex fillWidth mobileDirection="column" justifyContent="center">
-        {about.avatar.display && (
-          <Flex
-            minWidth="160"
-            paddingX="l"
-            paddingBottom="xl"
-            gap="m"
-            flex={3}
-            direction="column"
-            alignItems="center"
-          >
-            <Avatar src={person.avatar} size="xl" />
-            <Flex gap="8" alignItems="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
-            </Flex>
-            {person.languages.length > 0 && (
-              <Flex wrap gap="8">
-                {person.languages.map((language, index) => (
-                  <Tag key={index} size="l">
-                    {language}
-                  </Tag>
-                ))}
-              </Flex>
-            )}
-          </Flex>
-        )}
         <Flex
           className={styles.blockAlign}
           fillWidth
@@ -145,37 +115,14 @@ export default function About() {
             justifyContent="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Flex
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                  border: "1px solid var(--brand-alpha-medium)",
-                  width: "fit-content",
-                }}
-                alpha="brand-weak"
-                radius="full"
-                fillWidth
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                alignItems="center"
-              >
-                <Flex paddingLeft="12">
-                  <Icon name="calendar" onBackground="brand-weak" />
-                </Flex>
-                <Flex paddingX="8">Contact Me</Flex>
-                <IconButton
-                  href="tel:+918891466756"
-                  data-border="rounded"
-                  variant="tertiary"
-                  icon="chevronRight"
-                />
-              </Flex>
-            )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
-            </Heading>
+            <Flex>
+              {" "}
+              <Heading className={styles.textAlign} variant="display-strong-xl">
+                {person.name}
+              </Heading>
+              <Avatar src={person.avatar} size="xl" />
+            </Flex>
+
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
@@ -183,28 +130,53 @@ export default function About() {
             >
               {person.role}
             </Text>
+
             {social.length > 0 && (
-              <Flex
-                className={styles.blockAlign}
-                paddingTop="20"
-                paddingBottom="8"
-                gap="8"
-                wrap
-              >
-                {social.map(
-                  (item) =>
-                    item.link && (
-                      <Button
-                        key={item.name}
-                        href={item.link}
-                        prefixIcon={item.icon}
-                        label={item.name}
-                        size="s"
-                        variant="tertiary"
-                      />
-                    )
-                )}
-              </Flex>
+              <>
+                <Flex
+                  className={styles.blockAlign}
+                  paddingTop="20"
+                  paddingBottom="8"
+                  gap="8"
+                  wrap
+                >
+                  {social.map(
+                    (item) =>
+                      item.link && (
+                        <Button
+                          key={item.name}
+                          href={item.link}
+                          prefixIcon={item.icon}
+                          label={item.name}
+                          size="s"
+                          variant="tertiary"
+                        />
+                      )
+                  )}
+                  <Flex
+                    className={styles.blockAlign}
+                    style={{
+                      backdropFilter: "blur(var(--static-space-1))",
+                      border: "1px solid var(--brand-alpha-medium)",
+                      width: "fit-content",
+                    }}
+                    alpha="brand-weak"
+                    radius="full"
+                    fillWidth
+                    gap="8"
+                    marginBottom="m"
+                    alignItems="center"
+                  >
+                    <Flex paddingX="8">Contact Me</Flex>
+                    <IconButton
+                      href="tel:+918891466756"
+                      data-border="rounded"
+                      variant="tertiary"
+                      icon="chevronRight"
+                    />
+                  </Flex>
+                </Flex>
+              </>
             )}
           </Flex>
 
@@ -382,6 +354,30 @@ export default function About() {
             </>
           )}
         </Flex>
+
+        {/* {about.avatar.display && (
+          <Flex
+            minWidth="160"
+            paddingX="l"
+            paddingBottom="xl"
+            gap="m"
+            flex={3}
+            direction="column"
+            alignItems="center"
+          >
+            <Avatar src={person.avatar} size="xl" />
+
+            {person.languages.length > 0 && (
+              <Flex wrap gap="8">
+                {person.languages.map((language, index) => (
+                  <Tag key={index} size="l">
+                    {language}
+                  </Tag>
+                ))}
+              </Flex>
+            )}
+          </Flex>
+        )} */}
       </Flex>
     </Flex>
   );
