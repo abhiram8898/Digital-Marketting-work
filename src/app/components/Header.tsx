@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Flex, ToggleButton } from "@/once-ui/components";
+import { Flex, Icon, ToggleButton } from "@/once-ui/components";
 import styles from "@/app/components/Header.module.scss";
+
 import { routes, display } from "@/app/resources";
 import { person, home, about, work } from "@/app/resources";
 import React from "react";
@@ -27,7 +28,12 @@ export const Header = () => {
         alignItems="center"
         textVariant="body-default-s"
       >
-        {display.location && <>{person.location}</>}
+        {display.location && (
+          <>
+            <Icon onBackground="accent-weak" name="globe" />
+            {person.location}
+          </>
+        )}
       </Flex>
       <Flex
         background="surface"
@@ -74,6 +80,14 @@ export const Header = () => {
           )}
         </Flex>
       </Flex>
+      <Flex
+        hide="s"
+        paddingRight="12"
+        fillWidth
+        justifyContent="flex-end"
+        alignItems="center"
+        textVariant="body-default-s"
+      ></Flex>
     </Flex>
   );
 };
