@@ -44,6 +44,10 @@ const home = {
       <InlineCode>Top Level Builders and Developers</InlineCode>, where I
       Develop and implement various strategies by providing creative solutions
       to improve businesses.
+      <br />
+      <br /> I firmly believe that businesses can establish a narrative
+      connection with their clients, and I'm committed to building communities
+      that honor commitment and trust. I'm overjoyed.
     </>
   ),
 };
@@ -68,10 +72,17 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        christina is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Hi there! I'm Christina Simon, an enthusiastic manager of digital
+        marketing with a track record of creating and implementing creative
+        marketing plans that boost engagement and brand growth. Having worked
+        extensively in social media management, content development, and data
+        analytics, I enjoy turning findings into workable strategies that appeal
+        to target audiences. <br /> <br /> Throughout my professional life, I
+        have effectively increased brand awareness on social media sites like
+        Facebook and Instagram by utilizing the newest tools and fashions to
+        interact with users and maximize output. My strategy blends analytical
+        thinking with creativity to make sure every campaign produces
+        quantifiable outcomes in addition to stunning visuals. <br /> <br />
       </>
     ),
   },
@@ -79,6 +90,22 @@ const about = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
+      {
+        company: "Top Level Builders and Developers",
+        timeframe: "2023 - 2024",
+        role: "Digital Marketing Manager",
+        achievements: [
+          <>
+            Measure and report the performance of all digital marketing
+            campaigns and assess against goals (ROI and KPIs).
+          </>,
+          <>
+            Develop and implement various strategies by providing creative
+            solutions to improve businesses.
+          </>,
+        ],
+        images: [],
+      },
       {
         company: "Brackenberry",
         timeframe: "2024 - Present",
@@ -101,22 +128,7 @@ const about = {
           },
         ],
       },
-      {
-        company: "Top Level Builders and Developers",
-        timeframe: "2023 - 2024",
-        role: "Digital Marketing Manager",
-        achievements: [
-          <>
-            Measure and report the performance of all digital marketing
-            campaigns and assess against goals (ROI and KPIs).
-          </>,
-          <>
-            Develop and implement various strategies by providing creative
-            solutions to improve businesses.
-          </>,
-        ],
-        images: [],
-      },
+
       {
         company: "Bictree",
         timeframe: "2022 - 2023",
