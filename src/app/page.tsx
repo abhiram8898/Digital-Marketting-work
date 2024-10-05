@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Heading,
   Flex,
@@ -8,8 +7,6 @@ import {
   Avatar,
   RevealFx,
 } from "@/once-ui/components";
-import { Projects } from "@/app/work/components/Projects";
-
 import { about, baseURL, home, person } from "@/app/resources";
 
 export function generateMetadata() {
@@ -110,10 +107,6 @@ export default function Home() {
           </RevealFx>
         </Flex>
       </Flex>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
-      <Projects range={[2]} />
     </Flex>
   );
 }
