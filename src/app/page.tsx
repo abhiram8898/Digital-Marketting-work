@@ -8,6 +8,7 @@ import {
   RevealFx,
 } from "@/once-ui/components";
 import { about, baseURL, home, person } from "@/app/resources";
+import { Projects } from "./work/components/Projects";
 
 export function generateMetadata() {
   const title = home.title;
@@ -107,6 +108,10 @@ export default function Home() {
           </RevealFx>
         </Flex>
       </Flex>
+      <RevealFx translateY="16" delay={0.6}>
+        <Projects range={[1, 1]} />
+      </RevealFx>
+      <Projects range={[2]} />
     </Flex>
   );
 }
