@@ -19,13 +19,9 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "www.linkedin.com/in/christina-simon-17909a1b9",
+    link: "https://www.linkedin.com/in/christina-simon-17909a1b9",
   },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
+
   {
     name: "Email",
     icon: "email",
@@ -40,14 +36,20 @@ const home = {
   headline: <>Digital Marketing Manager</>,
   subline: (
     <>
-      I'm Christina, a digital marketing manager at{" "}
+      Hey,
+      <br />
+      {/* I'm Christina, a digital marketing manager at{" "}
       <InlineCode>Top Level Builders and Developers</InlineCode>, where I
       Develop and implement various strategies by providing creative solutions
-      to improve businesses.
-      <br />
-      <br /> I firmly believe that businesses can establish a narrative
-      connection with their clients, and I'm committed to building communities
-      that honor commitment and trust. I'm overjoyed.
+      to improve businesses. */}
+      {/* <br />
+      <br /> */}
+      Every brand, in my opinion, has a story to tell, and it is my goal to
+      assist them in crafting an engaging narrative that will connect with their
+      target audience. In addition to making sure that our plans are successful,
+      I also make sure that they are in line with the goals and values of the
+      communities we serve by utilizing the most recent marketing trends and
+      data-driven insights.
     </>
   ),
 };
